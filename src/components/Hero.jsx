@@ -17,14 +17,16 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-visual" aria-hidden="true">
-        <div className="code-card">
-          <div className="code-bar" />
-          <div className="code-line w80" />
-          <div className="code-line w60" />
-          <div className="code-line w90" />
-          <div className="code-line w50" />
-          <div className="code-grid">
-            <span /><span /><span /><span />
+        <div className="profile-card">
+          <div className="profile-monogram">DM</div>
+          <div className="profile-name">{personal.name}</div>
+          <div className="profile-role">{personal.title}</div>
+          <div className="profile-location">{personal.location}</div>
+          <div className="profile-tech">
+            <span>React</span><span>JavaScript</span><span>CSS</span><span>Responsive Design</span>
+          </div>
+          <div className="profile-availability">
+            <span className="dot" /> Open to Work
           </div>
         </div>
       </div>
