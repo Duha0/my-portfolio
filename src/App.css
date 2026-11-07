@@ -124,3 +124,8 @@ img { max-width: 100%; }
 }
 
 .more-projects { margin-top: 2rem; text-align: center; }
+
+.browser-frame { height: 100%; display: flex; flex-direction: column; background: var(--card); }
+.browser-bar { display: flex; gap: 6px; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+.browser-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--bg-2); }
+.browser-frame img { flex: 1; width: 100%; object-fit: contain; background: var(--bg-2); }

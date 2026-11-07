@@ -9,7 +9,10 @@ function getImage(project, theme) {
 function Visual({ project, theme }) {
   const src = getImage(project, theme);
   const content = src ? (
-    <img src={src} alt={`${project.name} screenshot`} />
+    <div className="browser-frame">
+      <div className="browser-bar"><span /><span /><span /></div>
+      <img src={src} alt={`${project.name} screenshot`} />
+    </div>
   ) : (
     <div className={`project-visual ${project.visual}`} />
   );

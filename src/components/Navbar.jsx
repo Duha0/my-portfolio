@@ -1,19 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { personal } from "../data/portfolio";
 
 export default function Navbar({ theme, setTheme }) {
   const [open, setOpen] = useState(false);
+  const navRef = useRef(null);
   const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
+  useEffect(() => {
+    function onClick(e) {
+      if (navRef.current && !navRef.current.contains(e.target)) setOpen(false);
+    }
+    function onKey(e) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    function onResize() {
+      if (window.innerWidth > 768) setOpen(false);
+    }
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
   return (
-    <nav className="nav">
+    <nav className="nav" ref={navRef}>
       <a href="#home" className="nav-brand">{personal.name}</a>
-      <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+      <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open} aria-controls="nav-menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           {open ? <path d="M18 6L6 18M6 6l12 12" /> : <path d="M3 12h18M3 6h18M3 18h18" />}
         </svg>
       </button>
-      <ul className={`nav-links ${open ? "open" : ""}`}>
+      <ul id="nav-menu" className={`nav-links ${open ? "open" : ""}`}>
         {links.map((l) => (
           <li key={l}>
             <a href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>{l}</a>
