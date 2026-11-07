@@ -2,7 +2,7 @@ import { skills } from "../data/portfolio";
 
 export default function Skills() {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section reveal">
       <h2>Skills</h2>
       <div className="skills-grid">
         {skills.map((s) => (
