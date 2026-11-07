@@ -43,7 +43,7 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
+        <Projects theme={theme} />
         <Contact />
       </main>
       <Footer />

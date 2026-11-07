@@ -1,16 +1,26 @@
 import { useState } from "react";
 import { featuredProjects, moreProjects } from "../data/portfolio";
 
-function Visual({ type, image, live }) {
-  const content = image ? <img src={image} alt="" /> : <div className={`project-visual ${type}`} />;
-  if (live) return <a href={live} target="_blank" rel="noreferrer" className="project-visual-link">{content}</a>;
+function getImage(project, theme) {
+  if (project.imageLight) return theme === "dark" ? project.imageDark : project.imageLight;
+  return project.image;
+}
+
+function Visual({ project, theme }) {
+  const src = getImage(project, theme);
+  const content = src ? (
+    <img src={src} alt={`${project.name} screenshot`} />
+  ) : (
+    <div className={`project-visual ${project.visual}`} />
+  );
+  if (project.live) return <a href={project.live} target="_blank" rel="noreferrer" className="project-visual-link" aria-label={`Open ${project.name} live demo`}>{content}</a>;
   return content;
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, theme }) {
   return (
     <article className="project-card">
-      <Visual type={project.visual} image={project.image} live={project.live} />
+      <Visual project={project} theme={theme} />
       <h3>{project.name} {project.featured && <span className="featured-badge">Featured</span>}</h3>
       <p>{project.description}</p>
       <div className="tech-list">
@@ -24,13 +34,13 @@ function ProjectCard({ project }) {
   );
 }
 
-export default function Projects() {
+export default function Projects({ theme }) {
   const [showMore, setShowMore] = useState(false);
   return (
     <section id="projects" className="section reveal">
       <h2>Featured Projects</h2>
       <div className="projects-grid">
-        {featuredProjects.map((p) => <ProjectCard key={p.name} project={p} />)}
+        {featuredProjects.map((p) => <ProjectCard key={p.name} project={p} theme={theme} />)}
       </div>
       <div className="more-projects">
         <button className="btn secondary" onClick={() => setShowMore(!showMore)}>
@@ -38,7 +48,7 @@ export default function Projects() {
         </button>
         {showMore && (
           <div className="projects-grid" style={{ marginTop: "1.5rem" }}>
-            {moreProjects.map((p) => <ProjectCard key={p.name} project={p} />)}
+            {moreProjects.map((p) => <ProjectCard key={p.name} project={p} theme={theme} />)}
           </div>
         )}
       </div>
