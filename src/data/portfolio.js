@@ -76,10 +76,10 @@ export const featuredProjects = [
 ];
 
 export const moreProjects = [
-  { name: "Password Generator", description: "Generate secure passwords.", tech: [], visual: "password", image: null, github: "", live: "https://password-generator-ws.vercel.app/" },
-  { name: "Notes App", description: "Create and manage notes.", tech: [], visual: "notes", image: null, github: "", live: "https://notes-app-six-ebon.vercel.app/" },
-  { name: "Calculator", description: "A responsive calculator.", tech: [], visual: "calc", image: null, github: "", live: "https://responsive-calculator-virid.vercel.app/" },
-  { name: "Guess the Number", description: "A number guessing game.", tech: [], visual: "guess", image: null, github: "", live: "https://guess-the-number-responsive-ws.vercel.app/" },
-  { name: "Counter", description: "A simple counter application.", tech: [], visual: "counter", image: null, github: "", live: "https://responsive-counter.vercel.app/" },
-  { name: "Digital Clock", description: "A digital clock display.", tech: [], visual: "clock", image: null, github: "", live: "https://digital-clock-nine-brown.vercel.app/" },
+  { name: "Password Generator", description: "Generate secure passwords.", tech: [], visual: "password", image: "/images/projects/password-generator.png", github: "", live: "https://password-generator-ws.vercel.app/" },
+  { name: "Notes App", description: "Create and manage notes.", tech: [], visual: "notes", image: "/images/projects/notes-app.png", github: "", live: "https://notes-app-six-ebon.vercel.app/" },
+  { name: "Calculator", description: "A responsive calculator.", tech: [], visual: "calc", image: "/images/projects/calculator.png", github: "", live: "https://responsive-calculator-virid.vercel.app/" },
+  { name: "Guess the Number", description: "A number guessing game.", tech: [], visual: "guess", image: "/images/projects/guess-number.png", github: "", live: "https://guess-the-number-responsive-ws.vercel.app/" },
+  { name: "Counter", description: "A simple counter application.", tech: [], visual: "counter", image: "/images/projects/counter.png", github: "", live: "https://responsive-counter.vercel.app/" },
+  { name: "Digital Clock", description: "A digital clock display.", tech: [], visual: "clock", image: "/images/projects/digital-clock.png", github: "", live: "https://digital-clock-nine-brown.vercel.app/" },
 ];

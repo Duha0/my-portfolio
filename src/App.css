@@ -77,7 +77,7 @@ img { max-width: 100%; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
 .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(15,23,42,0.1); }
-.project-visual { height: 160px; border-radius: 10px; border: 1px solid var(--border); position: relative; overflow: hidden; background: linear-gradient(135deg, var(--bg-2), var(--card)); }
+.project-visual { height: 220px; border-radius: 10px; border: 1px solid var(--border); position: relative; overflow: hidden; background: linear-gradient(135deg, var(--bg-2), var(--card)); }
 .project-visual.studyai { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
 .project-visual.weather { background: linear-gradient(135deg, #0ea5e9, #60a5fa); }
 .project-visual.currency { background: linear-gradient(135deg, #1d4ed8, #3b82f6); }
@@ -129,3 +129,12 @@ img { max-width: 100%; }
 .browser-bar { display: flex; gap: 6px; padding: 8px 10px; border-bottom: 1px solid var(--border); }
 .browser-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--bg-2); }
 .browser-frame img { flex: 1; width: 100%; object-fit: contain; background: var(--bg-2); }
+
+@media (max-width: 768px) {
+  .nav { position: relative; }
+  .nav-links { position: absolute; top: calc(100% + 8px); right: 1rem; left: auto; width: min(280px, calc(100vw - 2rem)); flex-direction: column; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0.75rem; display: none; gap: 0.5rem; box-shadow: 0 12px 30px rgba(15,23,42,0.15); }
+  .nav-links.open { display: flex; }
+}
+@media (max-width: 639px) { .projects-grid { grid-template-columns: 1fr; } }
+@media (min-width: 640px) and (max-width: 1023px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .projects-grid { grid-template-columns: repeat(3, 1fr); } .project-card.featured { grid-column: span 2; } }

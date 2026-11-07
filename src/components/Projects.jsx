@@ -22,7 +22,7 @@ function Visual({ project, theme }) {
 
 function ProjectCard({ project, theme }) {
   return (
-    <article className="project-card">
+    <article className={`project-card ${project.featured ? "featured" : ""}`}>
       <Visual project={project} theme={theme} />
       <h3>{project.name} {project.featured && <span className="featured-badge">Featured</span>}</h3>
       <p>{project.description}</p>
