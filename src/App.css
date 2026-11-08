@@ -150,3 +150,6 @@ img { max-width: 100%; }
 .profile-availability { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--muted); }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .profile-card { animation: none; transition: none; } }
+
+.contact-links { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.contact-email { margin-top: 1rem; color: var(--muted); font-size: 0.9rem; }

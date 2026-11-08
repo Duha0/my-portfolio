@@ -45,15 +45,12 @@ export default function Projects({ theme }) {
       <div className="projects-grid">
         {featuredProjects.map((p) => <ProjectCard key={p.name} project={p} theme={theme} />)}
       </div>
-      <div className="more-projects">
-        <button className="btn secondary" onClick={() => setShowMore(!showMore)}>
-          {showMore ? "Hide More Projects" : "More Projects"}
-        </button>
-        {showMore && (
-          <div className="projects-grid" style={{ marginTop: "1.5rem" }}>
-            {moreProjects.map((p) => <ProjectCard key={p.name} project={p} theme={theme} />)}
-          </div>
-        )}
+      <div className="more-projects-cta">
+        <p>Want to see more of my work? Explore my other projects and experiments.</p>
+        <div className="hero-ctas">
+          <a href="https://github.com/Duha0" target="_blank" rel="noopener noreferrer" className="btn secondary">More on GitHub</a>
+          <a href="https://vercel.com/duha0" target="_blank" rel="noopener noreferrer" className="btn primary">Explore on Vercel</a>
+        </div>
       </div>
     </section>
   );
