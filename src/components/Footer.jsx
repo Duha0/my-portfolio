@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Duha. All rights reserved.</p>
+      <p>© {new Date().getFullYear()} Doha Mustafa. All rights reserved.</p>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
