@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { personal } from "../data/portfolio";
 
+const NAV_LINKS = ["Home", "About", "Skills", "Services", "Projects", "Contact"];
+
 export default function Navbar({ theme, setTheme }) {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const navRef = useRef(null);
-  const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
   useEffect(() => {
     function onClick(e) {
@@ -26,6 +28,25 @@ export default function Navbar({ theme, setTheme }) {
     };
   }, []);
 
+  useEffect(() => {
+    const sections = NAV_LINKS.map((l) => l.toLowerCase()).filter((l) => l !== "home");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-100px 0px -60% 0px", threshold: 0 }
+    );
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav className="nav" ref={navRef}>
       <a href="#home" className="nav-brand">{personal.name}</a>
@@ -35,9 +56,16 @@ export default function Navbar({ theme, setTheme }) {
         </svg>
       </button>
       <ul id="nav-menu" className={`nav-links ${open ? "open" : ""}`}>
-        {links.map((l) => (
+        {NAV_LINKS.map((l) => (
           <li key={l}>
-            <a href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>{l}</a>
+            <a
+              href={`#${l.toLowerCase()}`}
+              onClick={() => setOpen(false)}
+              className={activeSection === l.toLowerCase() ? "active" : ""}
+              aria-current={activeSection === l.toLowerCase() ? "page" : undefined}
+            >
+              {l}
+            </a>
           </li>
         ))}
         <li>

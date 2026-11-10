@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { featuredProjects, moreProjects } from "../data/portfolio";
+import { featuredProjects } from "../data/portfolio";
 
 function getImage(project, theme) {
   if (project.imageLight) return theme === "dark" ? project.imageDark : project.imageLight;
@@ -8,37 +8,65 @@ function getImage(project, theme) {
 
 function Visual({ project, theme }) {
   const src = getImage(project, theme);
-  const content = src ? (
+  const [imgError, setImgError] = useState(false);
+
+  const hasExternalLink = project.live || project.github;
+  const externalUrl = project.live || project.github;
+  const externalLabel = project.live ? `Open ${project.name} live demo` : `View ${project.name} on GitHub`;
+
+  const content = src && !imgError ? (
     <div className="browser-frame">
       <div className="browser-bar"><span /><span /><span /></div>
-      <img src={src} alt={`${project.name} screenshot`} />
+      <img
+        src={src}
+        alt={`${project.name} screenshot`}
+        onError={() => setImgError(true)}
+        loading="lazy"
+      />
     </div>
   ) : (
     <div className={`project-visual ${project.visual}`} />
   );
-  if (project.live) return <a href={project.live} target="_blank" rel="noreferrer" className="project-visual-link" aria-label={`Open ${project.name} live demo`}>{content}</a>;
+
+  if (hasExternalLink) {
+    return (
+      <a
+        href={externalUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-visual-link"
+        aria-label={externalLabel}
+      >
+        {content}
+      </a>
+    );
+  }
   return content;
 }
 
 function ProjectCard({ project, theme }) {
+  const hasGithub = !!project.github;
+  const hasLive = !!project.live;
+
   return (
     <article className={`project-card ${project.featured ? "featured" : ""}`}>
       <Visual project={project} theme={theme} />
-      <h3>{project.name} {project.featured && <span className="featured-badge">Featured</span>}</h3>
-      <p>{project.description}</p>
-      <div className="tech-list">
-        {project.tech.map((t) => <span key={t} className="tech">{t}</span>)}
-      </div>
-      <div className="project-links">
-        {project.github ? <a href={project.github} target="_blank" rel="noreferrer">GitHub</a> : null}
-        {project.live ? <a href={project.live} target="_blank" rel="noreferrer">Live Demo</a> : null}
+      <div className="project-content">
+        <h3>{project.name} {project.featured && <span className="featured-badge">Featured</span>}</h3>
+        <p>{project.description}</p>
+        <div className="tech-list">
+          {project.tech.map((t) => <span key={t} className="tech">{t}</span>)}
+        </div>
+        <div className="project-links">
+          {hasLive && <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link primary">Live Demo</a>}
+          {hasGithub && <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link secondary">GitHub</a>}
+        </div>
       </div>
     </article>
   );
 }
 
 export default function Projects({ theme }) {
-  const [showMore, setShowMore] = useState(false);
   return (
     <section id="projects" className="section reveal">
       <h2>Featured Projects</h2>

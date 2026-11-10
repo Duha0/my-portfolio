@@ -17,14 +17,51 @@ export const about = {
   ],
 };
 
-export const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "React",
-  "Git",
-  "GitHub",
-  "Responsive Design",
+export const skillCategories = [
+  {
+    name: "Frontend Development",
+    skills: [
+      { name: "HTML5", icon: "html5" },
+      { name: "CSS3", icon: "css3" },
+      { name: "JavaScript", icon: "javascript" },
+      { name: "React", icon: "react" },
+      { name: "Responsive Design", icon: "responsive" },
+    ],
+  },
+  {
+    name: "Programming",
+    skills: [
+      { name: "Python", icon: "python" },
+    ],
+  },
+  {
+    name: "Tools & Technologies",
+    skills: [
+      { name: "Git", icon: "git" },
+      { name: "GitHub", icon: "github" },
+      { name: "VS Code", icon: "vscode" },
+      { name: "Vite", icon: "vite" },
+      { name: "npm", icon: "npm" },
+    ],
+  },
+];
+
+export const services = [
+  {
+    name: "Responsive Website Development",
+    description: "Mobile-first, accessible websites that work beautifully across all devices and screen sizes.",
+    icon: "layout",
+  },
+  {
+    name: "Frontend UI Implementation",
+    description: "Clean, performant React components and interfaces built with modern best practices.",
+    icon: "component",
+  },
+  {
+    name: "Website Redesign & Modernization",
+    description: "Refresh existing sites with improved UX, performance, and visual design.",
+    icon: "refresh",
+  },
 ];
 
 export const featuredProjects = [
