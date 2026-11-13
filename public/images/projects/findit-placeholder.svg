@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="FindIt campus lost and found website preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1530"/>
+      <stop offset="1" stop-color="#142345"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+    <clipPath id="window">
+      <rect x="40" y="30" width="720" height="440" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="40" y="30" width="720" height="440" rx="16" fill="#F8FAFC" filter="url(#shadow)"/>
+
+  <g clip-path="url(#window)">
+    <rect x="40" y="30" width="720" height="66" fill="#FFFFFF"/>
+    <line x1="40" y1="96" x2="760" y2="96" stroke="#E2E8F0" stroke-width="1"/>
+
+    <rect x="68" y="47" width="32" height="32" rx="9" fill="#2563EB"/>
+    <circle cx="82" cy="61" r="6.5" fill="none" stroke="#FFFFFF" stroke-width="2.4"/>
+    <line x1="87" y1="66" x2="91.5" y2="70.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+
+    <text x="112" y="69" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0F172A">FindIt</text>
+    <text x="112" y="85" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#64748B">Campus Lost &amp; Found</text>
+
+    <text x="522" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">Browse</text>
+    <text x="584" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">Report</text>
+    <text x="648" y="68" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#475569">My Items</text>
+    <rect x="704" y="49" width="56" height="30" rx="8" fill="#2563EB"/>
+    <text x="732" y="68" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600" fill="#FFFFFF">+ Add</text>
+
+    <text x="68" y="140" font-family="Inter, Segoe UI, sans-serif" font-size="26" font-weight="800" fill="#0F172A">Find what you lost.</text>
+    <text x="68" y="166" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#64748B">Report lost or found items, search campus listings, and add photos.</text>
+
+    <rect x="68" y="184" width="520" height="42" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <circle cx="89" cy="204" r="7" fill="none" stroke="#94A3B8" stroke-width="2"/>
+    <line x1="94" y1="209" x2="99" y2="214" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+    <text x="114" y="209" font-family="Inter, Segoe UI, sans-serif" font-size="12" fill="#94A3B8">Search by item, category, or location...</text>
+    <rect x="598" y="184" width="130" height="42" rx="10" fill="#0F172A"/>
+    <text x="663" y="209" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="12.5" font-weight="600" fill="#FFFFFF">Search</text>
+
+    <rect x="68" y="240" width="48" height="26" rx="13" fill="#2563EB"/>
+    <text x="92" y="257" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">All</text>
+    <rect x="124" y="240" width="54" height="26" rx="13" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="151" y="257" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">Lost</text>
+    <rect x="186" y="240" width="60" height="26" rx="13" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="216" y="257" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">Found</text>
+    <rect x="254" y="240" width="88" height="26" rx="13" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="298" y="257" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">Electronics</text>
+    <rect x="350" y="240" width="74" height="26" rx="13" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="387" y="257" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">ID Cards</text>
+    <rect x="432" y="240" width="60" height="26" rx="13" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="462" y="257" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="11" fill="#475569">Books</text>
+
+    <rect x="68" y="286" width="224" height="158" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="80" y="298" width="36" height="36" rx="9" fill="#EFF6FF"/>
+    <path d="M89 306v9a5 5 0 0 0 10 0v-9" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M105 306v9a5 5 0 0 1-10 0" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="234" y="300" width="46" height="20" rx="10" fill="#FEF2F2"/>
+    <text x="257" y="314" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#DC2626">Lost</text>
+    <text x="80" y="356" font-family="Inter, Segoe UI, sans-serif" font-size="12.5" font-weight="600" fill="#0F172A">Wireless Earbuds</text>
+    <text x="80" y="374" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Science Block - Today</text>
+    <line x1="80" y1="390" x2="280" y2="390" stroke="#F1F5F9" stroke-width="1"/>
+    <circle cx="89" cy="415" r="9" fill="#DBEAFE"/>
+    <text x="104" y="419" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#64748B">Reported by Amara</text>
+    <text x="280" y="419" text-anchor="end" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#2563EB">View</text>
+
+    <rect x="302" y="286" width="224" height="158" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="314" y="298" width="36" height="36" rx="9" fill="#EFF6FF"/>
+    <rect x="322" y="305" width="20" height="15" rx="2.5" fill="none" stroke="#2563EB" stroke-width="2"/>
+    <circle cx="327" cy="312" r="2" fill="#2563EB"/>
+    <line x1="333" y1="311" x2="338" y2="311" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="333" y1="315" x2="338" y2="315" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round"/>
+    <rect x="468" y="300" width="46" height="20" rx="10" fill="#ECFDF5"/>
+    <text x="491" y="314" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#059669">Found</text>
+    <text x="314" y="356" font-family="Inter, Segoe UI, sans-serif" font-size="12.5" font-weight="600" fill="#0F172A">Student ID Card</text>
+    <text x="314" y="374" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Library - 2h ago</text>
+    <line x1="314" y1="390" x2="514" y2="390" stroke="#F1F5F9" stroke-width="1"/>
+    <circle cx="323" cy="415" r="9" fill="#DBEAFE"/>
+    <text x="338" y="419" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#64748B">Reported by Joseph</text>
+    <text x="514" y="419" text-anchor="end" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#2563EB">View</text>
+
+    <rect x="536" y="286" width="224" height="158" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="548" y="298" width="36" height="36" rx="9" fill="#EFF6FF"/>
+    <path d="M560 315v-4a6 6 0 0 1 12 0v4" fill="none" stroke="#2563EB" stroke-width="2"/>
+    <rect x="557" y="313" width="18" height="15" rx="3" fill="none" stroke="#2563EB" stroke-width="2"/>
+    <rect x="702" y="300" width="46" height="20" rx="10" fill="#ECFDF5"/>
+    <text x="725" y="314" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#059669">Found</text>
+    <text x="548" y="356" font-family="Inter, Segoe UI, sans-serif" font-size="12.5" font-weight="600" fill="#0F172A">Blue Backpack</text>
+    <text x="548" y="374" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">Cafeteria - Yesterday</text>
+    <line x1="548" y1="390" x2="748" y2="390" stroke="#F1F5F9" stroke-width="1"/>
+    <circle cx="557" cy="415" r="9" fill="#DBEAFE"/>
+    <text x="572" y="419" font-family="Inter, Segoe UI, sans-serif" font-size="10" fill="#64748B">Reported by Aisha</text>
+    <text x="748" y="419" text-anchor="end" font-family="Inter, Segoe UI, sans-serif" font-size="10" font-weight="600" fill="#2563EB">View</text>
+  </g>
+</svg>

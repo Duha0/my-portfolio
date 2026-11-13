@@ -77,6 +77,16 @@ export const featuredProjects = [
     live: "",
   },
   {
+    name: "FindIt – Lost & Found",
+    description: "A responsive campus lost-and-found website where students can report lost or found items, search and filter listings, and add items with photos.",
+    tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
+    visual: "findit",
+    image: "/images/projects/findit.png",
+    placeholder: "/images/projects/findit-placeholder.svg",
+    github: "https://github.com/Duha0/FindIt-Project",
+    live: "https://findit-project-two.vercel.app/",
+  },
+  {
     name: "Login / Signup UI",
     description: "A responsive login and signup user interface.",
     tech: [],

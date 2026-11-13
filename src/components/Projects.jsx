@@ -9,16 +9,17 @@ function getImage(project, theme) {
 function Visual({ project, theme }) {
   const src = getImage(project, theme);
   const [imgError, setImgError] = useState(false);
+  const displaySrc = imgError && project.placeholder ? project.placeholder : src;
 
   const hasExternalLink = project.live || project.github;
   const externalUrl = project.live || project.github;
   const externalLabel = project.live ? `Open ${project.name} live demo` : `View ${project.name} on GitHub`;
 
-  const content = src && !imgError ? (
+  const content = displaySrc ? (
     <div className="browser-frame">
       <div className="browser-bar"><span /><span /><span /></div>
       <img
-        src={src}
+        src={displaySrc}
         alt={`${project.name} screenshot`}
         onError={() => setImgError(true)}
         loading="lazy"
